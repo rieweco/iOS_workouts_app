@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zuq-Hj-FSz">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Workout List-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="WorkoutListViewController" customModule="Project4" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="T1C-ow-IeH">
+                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WorkoutCell" rowHeight="64" id="X6q-3H-OSK" customClass="WorkoutListTableViewCell" customModule="Project4" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="64"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X6q-3H-OSK" id="Q2V-gf-eRL">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="63.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="iCw-lo-iXT" userLabel="Cell Stack View">
+                                                    <rect key="frame" x="8" y="8" width="327" height="47.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dHQ-4h-fM9" userLabel="Left Stack View">
+                                                            <rect key="frame" x="0.0" y="0.0" width="163.5" height="47.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIt-xm-5Oa">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="118" height="21.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIk-YR-Tzh">
+                                                                    <rect key="frame" x="0.0" y="26.5" width="65.5" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="bottom" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="WbD-to-xMt" userLabel="Right Stack View">
+                                                            <rect key="frame" x="163.5" y="0.0" width="163.5" height="47.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Cp-3S-QGy">
+                                                                    <rect key="frame" x="127.5" y="0.0" width="36" height="12.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intensity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VwJ-hg-cES">
+                                                                    <rect key="frame" x="98" y="17.5" width="65.5" height="12.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7k-kB-ZBm" userLabel="Calories Label">
+                                                                    <rect key="frame" x="101" y="35" width="62.5" height="12.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="iCw-lo-iXT" secondAttribute="trailing" id="8OA-7t-AmU"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="iCw-lo-iXT" secondAttribute="bottom" id="CGl-9g-hIl"/>
+                                                <constraint firstItem="iCw-lo-iXT" firstAttribute="top" secondItem="Q2V-gf-eRL" secondAttribute="topMargin" id="GR6-ev-aBd"/>
+                                                <constraint firstItem="iCw-lo-iXT" firstAttribute="leading" secondItem="Q2V-gf-eRL" secondAttribute="leadingMargin" id="dCN-ta-cC1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="caloriesLabel" destination="c7k-kB-ZBm" id="0g8-au-WVf"/>
+                                            <outlet property="dateLabel" destination="7Cp-3S-QGy" id="54e-xY-03f"/>
+                                            <outlet property="durationLabel" destination="OIk-YR-Tzh" id="4SI-b1-Tfm"/>
+                                            <outlet property="highIntensityLabel" destination="VwJ-hg-cES" id="vRV-j3-LEP"/>
+                                            <outlet property="nameLabel" destination="lIt-xm-5Oa" id="31q-sk-gef"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="T1C-ow-IeH" secondAttribute="trailing" id="6jh-WF-CtS"/>
+                            <constraint firstItem="T1C-ow-IeH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="NaP-Rq-Qfh"/>
+                            <constraint firstItem="T1C-ow-IeH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="QWd-EA-wRl"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="T1C-ow-IeH" secondAttribute="bottom" id="SbO-pW-Dp3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Workout List" id="nlc-Pm-zJG">
+                        <barButtonItem key="leftBarButtonItem" title="Sort" id="Dtk-wT-1RI">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="aL7-rx-oqv" kind="show" id="dfU-8u-JoN"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Z5F-PG-zuh">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="fMg-gI-W36" kind="show" id="378-u0-28O"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="T1C-ow-IeH" id="wgc-oK-Udg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="138.98050974512745"/>
+        </scene>
+        <!--Add a Workout-->
+        <scene sceneID="hud-6B-qwJ">
+            <objects>
+                <viewController title="Add a Workout" id="fMg-gI-W36" customClass="WorkoutCreationViewController" customModule="Project4" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DiO-us-IWt"/>
+                        <viewControllerLayoutGuide type="bottom" id="je3-aJ-tzi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="H9t-9g-FSq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="y71-Fu-ymN" userLabel="Main Stack View">
+                                <rect key="frame" x="19" y="-44.5" width="338" height="490"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="x1n-fo-7mQ" userLabel="Name Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="338" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oyd-NV-zfP">
+                                                <rect key="frame" x="0.0" y="0.0" width="161.5" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eGQ-v3-Ysj">
+                                                <rect key="frame" x="176.5" y="0.0" width="161.5" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="PaX-3d-IsR" userLabel="Date Stack View">
+                                        <rect key="frame" x="0.0" y="55" width="338" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="InH-fb-Fsm">
+                                                <rect key="frame" x="0.0" y="0.0" width="161.5" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HyX-F8-IBj">
+                                                <rect key="frame" x="176.5" y="0.0" width="161.5" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="KC0-ys-2BI" userLabel="Duration Stack View">
+                                        <rect key="frame" x="0.0" y="110" width="338" height="29"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TaZ-pa-xbQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="65.5" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bgA-Ef-qBn" userLabel="Minutes Stack View">
+                                                <rect key="frame" x="114" y="0.0" width="81.5" height="29"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZt-Ao-8uU">
+                                                        <rect key="frame" x="0.0" y="0.0" width="10.5" height="29"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAO-qw-nQd">
+                                                        <rect key="frame" x="20.5" y="0.0" width="61" height="29"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="mJy-qi-Hok">
+                                                <rect key="frame" x="244" y="0.0" width="94" height="29"/>
+                                                <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="minutesValueChanged:" destination="fMg-gI-W36" eventType="valueChanged" id="Ecv-ND-Gw9"/>
+                                                </connections>
+                                            </stepper>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Mct-YS-GGc" userLabel="Calories Stack View">
+                                        <rect key="frame" x="0.0" y="164" width="338" height="29"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42A-H9-NyV" userLabel="Calories Burned">
+                                                <rect key="frame" x="0.0" y="0.0" width="62.5" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="X1z-3Z-H9o" userLabel="Calories Burned Stack View">
+                                                <rect key="frame" x="112" y="0.0" width="83" height="29"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AdM-32-pFA" userLabel="Calories Label">
+                                                        <rect key="frame" x="0.0" y="0.0" width="10.5" height="29"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRd-cz-M9s" userLabel="Calories">
+                                                        <rect key="frame" x="20.5" y="0.0" width="62.5" height="29"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="R2b-Xh-UiS" userLabel="Calories Stepper">
+                                                <rect key="frame" x="244" y="0.0" width="94" height="29"/>
+                                                <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="caloriesValueChanged:" destination="fMg-gI-W36" eventType="valueChanged" id="uYM-HK-CCW"/>
+                                                </connections>
+                                            </stepper>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3c1-oB-EC4" userLabel="Intensity Stack View">
+                                        <rect key="frame" x="0.0" y="218" width="338" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Intensity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYq-7u-oUG">
+                                                <rect key="frame" x="0.0" y="0.0" width="284" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PEt-z4-ln2">
+                                                <rect key="frame" x="289" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="intensitySwitchChangeCalories:" destination="fMg-gI-W36" eventType="valueChanged" id="n7j-Xw-jMs"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7jb-8g-5Nz">
+                                        <rect key="frame" x="0.0" y="274" width="338" height="216"/>
+                                    </pickerView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ec-W1-acc">
+                                <rect key="frame" x="109" y="495.5" width="158" height="44"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                <state key="normal" title="Add Workout">
+                                    <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addWorkoutButtonTapped:" destination="fMg-gI-W36" eventType="touchUpInside" id="E2u-g1-gqe"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bIl-RY-iu1">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="y71-Fu-ymN" firstAttribute="centerY" secondItem="H9t-9g-FSq" secondAttribute="centerY" multiplier="0.6" id="4Qg-g1-Z7y"/>
+                            <constraint firstItem="bIl-RY-iu1" firstAttribute="leading" secondItem="H9t-9g-FSq" secondAttribute="leading" id="4RH-jW-dTK"/>
+                            <constraint firstItem="bIl-RY-iu1" firstAttribute="trailing" secondItem="H9t-9g-FSq" secondAttribute="trailing" id="IAu-hg-r4A"/>
+                            <constraint firstItem="0ec-W1-acc" firstAttribute="centerX" secondItem="H9t-9g-FSq" secondAttribute="centerX" id="c2m-tu-iw3"/>
+                            <constraint firstItem="0ec-W1-acc" firstAttribute="top" secondItem="y71-Fu-ymN" secondAttribute="bottom" constant="50" id="kkJ-Of-tBv"/>
+                            <constraint firstItem="y71-Fu-ymN" firstAttribute="width" secondItem="H9t-9g-FSq" secondAttribute="width" multiplier="0.9" id="lRJ-JR-OjZ"/>
+                            <constraint firstItem="je3-aJ-tzi" firstAttribute="top" secondItem="bIl-RY-iu1" secondAttribute="bottom" id="nBU-3X-V0o"/>
+                            <constraint firstItem="y71-Fu-ymN" firstAttribute="centerX" secondItem="H9t-9g-FSq" secondAttribute="centerX" id="v0W-Mk-yc2"/>
+                            <constraint firstItem="bIl-RY-iu1" firstAttribute="top" secondItem="DiO-us-IWt" secondAttribute="bottom" id="zE3-Np-Lhp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addWorkoutButton" destination="0ec-W1-acc" id="2c9-q5-uhg"/>
+                        <outlet property="caloriesLabel" destination="AdM-32-pFA" id="MUK-hv-Gjy"/>
+                        <outlet property="caloriesStepper" destination="R2b-Xh-UiS" id="6JY-o8-776"/>
+                        <outlet property="dateField" destination="HyX-F8-IBj" id="bQv-km-X7l"/>
+                        <outlet property="focusPicker" destination="7jb-8g-5Nz" id="g4Z-9c-ISr"/>
+                        <outlet property="highIntensitySwitch" destination="PEt-z4-ln2" id="oGa-8b-FFj"/>
+                        <outlet property="minutesLabel" destination="YZt-Ao-8uU" id="88B-eE-VKo"/>
+                        <outlet property="minutesStepper" destination="mJy-qi-Hok" id="DKk-BM-m8s"/>
+                        <outlet property="nameField" destination="eGQ-v3-Ysj" id="ofw-Ol-Uij"/>
+                        <outlet property="tappableBackgroundView" destination="bIl-RY-iu1" id="sCE-2q-dyd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wCN-Yl-3w7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2026.4000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--Sort Options-->
+        <scene sceneID="mGE-r8-qo5">
+            <objects>
+                <viewController title="Sort Options" id="aL7-rx-oqv" customClass="WorkoutSortViewController" customModule="Project4" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b3X-1x-pZQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wnH-q0-tYU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lmv-Kg-0jI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="vNQ-mx-2t5">
+                                <rect key="frame" x="74.5" y="170.5" width="226" height="326"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7JU-IN-u6A">
+                                        <rect key="frame" x="0.0" y="0.0" width="226" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                        <state key="normal" title="Date (Ascending)">
+                                            <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dateAscendingSortButton:" destination="aL7-rx-oqv" eventType="touchUpInside" id="cnr-5v-Gmh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceG-lM-bbc">
+                                        <rect key="frame" x="0.0" y="94" width="226" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                        <state key="normal" title="Date (Descending)">
+                                            <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dateDescendingSortButton:" destination="aL7-rx-oqv" eventType="touchUpInside" id="CBa-AQ-aOF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="raf-OX-dsL">
+                                        <rect key="frame" x="0.0" y="188" width="226" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                        <state key="normal" title="Calories Burned">
+                                            <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="caloriesBurnedSortButton:" destination="aL7-rx-oqv" eventType="touchUpInside" id="DZN-Ag-Sfi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8T-6S-4X7">
+                                        <rect key="frame" x="0.0" y="282" width="226" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                        <state key="normal" title="Duration">
+                                            <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="durationSortButton:" destination="aL7-rx-oqv" eventType="touchUpInside" id="Wnv-M7-oF5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vNQ-mx-2t5" firstAttribute="centerY" secondItem="Lmv-Kg-0jI" secondAttribute="centerY" id="EP4-IT-OJE"/>
+                            <constraint firstItem="vNQ-mx-2t5" firstAttribute="centerX" secondItem="Lmv-Kg-0jI" secondAttribute="centerX" id="PIY-tH-8uY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hsu-ba-H2X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2026" y="855"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Phv-LT-aPb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zuq-Hj-FSz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZnL-bo-WO8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="BGd-gJ-YPf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XVy-wd-GfS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
